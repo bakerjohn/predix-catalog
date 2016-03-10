@@ -1,0 +1,12 @@
+Flask
+sqlalchemy 
+
+httplib2
+
+requests
+dicttoxml
+oauth2client
+oauthlib
+flask-csrf
+
+

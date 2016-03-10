@@ -1,0 +1,23 @@
+
+---
+applications:
+# give the application a name
+- name: cf-catalog
+
+# allocate system memory
+  memory: 128M
+
+# add a buildpack
+# cf buildpack will show avaiable buildpacks
+  buildpack: python_buildpack
+
+# start the application
+  #command:  DEBUG=express:* node app.js
+ # command: 
+
+# bind the service name you created
+services:
+- baker-uaa
+- catalog
+
+

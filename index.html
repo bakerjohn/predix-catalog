@@ -1,0 +1,18 @@
+$def with(args)
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>$args['title']</title>
+  </head>
+  <body>
+  <form method=post action="">
+    <input type=hidden name=csrf_token value="$csrf_token()">
+    <label for=message>Message:</label>
+    <input id=message name=message value="$args['message']">
+    <input type=submit value="Update">
+  </form>
+  $if args['veteran']:
+    If you <a href="javascript:history.back()">go back</a> and try to update the previous page,<br>
+    you'll be detected as a CSRF attack. Good luck :)
+  </body>
+</html>
